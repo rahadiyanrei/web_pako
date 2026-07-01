@@ -2,57 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Company Website Routes
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|--------------------------------------------------------------------------
+| Load Module Routes
+|--------------------------------------------------------------------------
+|
+| Routes for each module are loaded from their respective module directories.
+| This keeps the main routes file clean and maintains modular architecture.
+|
+*/
 
-Route::get('/about', function () {
-    return view('company.about');
-});
+// Load WebPako Module Routes (Company Website)
+require base_path('modules/WebPako/Routes/web.php');
 
-Route::get('/contact', function () {
-    return view('company.contact');
-});
+// Load Portal Module Routes (Company A)
+require base_path('modules/Portal/Routes/web.php');
 
-Route::get('/bod', function () {
-    return view('company.bod');
-});
-
-// Portal Vendor Company A Routes
-Route::prefix('portal')->group(function () {
-    Route::get('/', function () {
-        return view('portal.index');
-    })->name('portal.index');
-
-    Route::get('/supplier', function () {
-        return view('portal.supplier.index');
-    })->name('portal.supplier.index');
-
-    Route::get('/supplier/po', function () {
-        return view('portal.supplier.po');
-    })->name('portal.supplier.po');
-
-    Route::get('/supplier/dn', function () {
-        return view('portal.supplier.dn');
-    })->name('portal.supplier.dn');
-});
-
-// Portal Vendor Company B Routes (portal-inko)
-Route::prefix('portal-inko')->group(function () {
-    Route::get('/', function () {
-        return view('portal-inko.index');
-    })->name('portal-inko.index');
-
-    Route::get('/supplier', function () {
-        return view('portal-inko.supplier.index');
-    })->name('portal-inko.supplier.index');
-
-    Route::get('/supplier/po', function () {
-        return view('portal-inko.supplier.po');
-    })->name('portal-inko.supplier.po');
-
-    Route::get('/supplier/dn', function () {
-        return view('portal-inko.supplier.dn');
-    })->name('portal-inko.supplier.dn');
-});
+// Load PortalInko Module Routes (Company B)
+require base_path('modules/PortalInko/Routes/web.php');
