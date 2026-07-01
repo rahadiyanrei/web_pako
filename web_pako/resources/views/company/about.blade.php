@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Company Website</title>
-</head>
-<body>
-    <h1>About Us</h1>
-    <p>Welcome to our company website. This is the about page.</p>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/contact">Contact</a> |
-        <a href="/bod">Board of Directors</a> |
-        <a href="/portal">Portal Vendor A</a> |
-        <a href="/portal-inko">Portal Vendor B</a>
-    </nav>
-</body>
-</html>
+@extends('company.layout')
+
+@section('title', 'About - Company Website')
+
+@section('content')
+<main>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Learn more about our company history, mission, and values.</p>
+        
+        <h2>Our History</h2>
+        <p>Founded in 2024, we have been serving clients with dedication and excellence.</p>
+        
+        <h2>Our Mission</h2>
+        <p>To provide innovative solutions that drive business growth for our clients.</p>
+        
+        <h2>Our Values</h2>
+        <ul>
+            <li>Integrity</li>
+            <li>Excellence</li>
+            <li>Innovation</li>
+            <li>Customer Focus</li>
+        </ul>
+    </div>
+</main>
+@endsection

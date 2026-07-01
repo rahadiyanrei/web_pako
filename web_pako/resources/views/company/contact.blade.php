@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Company Website</title>
-</head>
-<body>
-    <h1>Contact Us</h1>
-    <p>This is the contact page.</p>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/contact">Contact</a> |
-        <a href="/bod">Board of Directors</a> |
-        <a href="/portal">Portal Vendor A</a> |
-        <a href="/portal-inko">Portal Vendor B</a>
-    </nav>
-</body>
-</html>
+@extends('company.layout')
+
+@section('title', 'Contact - Company Website')
+
+@section('content')
+<main>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with us.</p>
+        
+        <h2>Our Office</h2>
+        <p>123 Business Street<br>
+        Jakarta, Indonesia 12345</p>
+        
+        <h2>Email</h2>
+        <p>info@company.com</p>
+        
+        <h2>Phone</h2>
+        <p>+62 21 1234 5678</p>
+        
+        <h2>Business Hours</h2>
+        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+    </div>
+</main>
+@endsection
